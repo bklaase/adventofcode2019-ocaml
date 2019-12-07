@@ -1,3 +1,7 @@
+(* to use tuareg repl, run these
+#mod_use "../lib/lib.ml" ;;
+let inputfile = "input.txt" ;;
+ *)
 
 (* generic input parsing *)
 let read_file filename func = 
@@ -10,7 +14,7 @@ let read_file filename func =
   with End_of_file ->
     close_in chan; List.rev !lines 
 
-(* to use tuareg repl, run these
-#mod_use "../lib/lib.ml" ;;
-let inputfile = "input.txt" ;;
- *)
+
+let print_results r1 r2 =                       
+  Format.printf "Answers:@.Solution to part one: %s@.Solution to part two: %s@."
+    r1 r2

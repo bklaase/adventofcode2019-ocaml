@@ -50,6 +50,6 @@ let part2 input  =
   in loop 0 0
 
 let () =
-  let part1result = (part1 input) in
-  Format.printf "Answers:@.Solution to part one: %d@.Solution to part two: %d@."
-    (part1result.tape.(0)) (part2 input)
+  let part1result = (part1 input).tape.(0) |> string_of_int in
+  let part2result = (part2 input) |> string_of_int in
+  Lib.print_results part1result part2result
