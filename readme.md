@@ -1,8 +1,12 @@
 # Advent of Code 2019 - OCAML
 To run the solution for a day have ocaml, opam and dune installed.
 
-Then:
+Then to install dependencies:
 
-`> dune exec dayn/solution.exe`
+`> ./installdeps.sh`
 
-.. with dayn being the day the run. (ex: day1).
+Then for an available day::
+
+`> ./run-day.sh n`
+
+.. with n being the day number to run. (ex: 1).

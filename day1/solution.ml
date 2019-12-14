@@ -20,7 +20,7 @@ let day1b =
   let addnext a e = a + calcmodfuel_includefuel e in
   List.fold_left addnext 0 input 
 
-
 let () =
-  Format.printf "Solution to part one: %d
-Solution to part two: %d@."  day1a day1b
+  Lib.print_results
+    ( string_of_int day1a )
+    ( string_of_int day1b )

@@ -1,4 +1,4 @@
-Printexc.record_backtrace true
+Printexc.record_backtrace true ;;
 open Base ;;
 (* preprossing *)
 let inputfile = "day3/input.txt"
@@ -36,7 +36,7 @@ let update_board_with_ws board pos ws =
   Hashtbl.add board ~key:pos ~data:(match wiring with
     | None -> ws
     | Some Both_wires -> Both_wires
-    | Some state -> if state == ws then ws else Both_wires)
+    | Some state -> if phys_equal state ws then ws else Both_wires)
 
 let apply_instruction_to_board_pos instr board (x,y) ws =
   let (cx,cy) = (ref x, ref y) in
@@ -52,4 +52,4 @@ let apply_instruction_to_board_pos instr board (x,y) ws =
       loop ())
   in loop ()
 
-let part1 input =
+(* let part1 input = *)

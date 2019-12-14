@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "adventofcode2019-ocaml"
+version: "~dev"
+synopsis: "Solutions to advent of code 2019 in ocaml"
+maintainer: "B.Klaase"
+authors: "B.Klaase"
+license: "MIT"
+homepage: "https://github.com/bklaase/adventofcode2019-ocaml"
+dev-repo: "git+https://github.com/bklaase/adventofcode2019-ocaml"
+bug-reports: "https://github.com/bklaase/adventofcode2019-ocaml/issues"
+build: [
+  ["dune" "subst" ] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "build" "-p" name "-j" jobs "@doc"] {with-doc}
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+depends: [
+  "ocaml" {>= "4.02"}
+  "dune" {build}
+  "base"
+  "stdio"
+]

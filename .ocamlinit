@@ -1,0 +1,5 @@
+#use "topfind" ;;
+#require "base" ;;
+#require "stdio" ;;
+
+#mod_use "lib/lib.ml" ;;
